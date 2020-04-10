@@ -1,0 +1,162 @@
+areas:
+  - name: Dirtmouth
+    logic:
+    locations:
+      - name: Fury of the Fallen
+      - name: Sly
+        weight: 4
+      - name: Wayward Compass
+      - name: Sly (Key)
+        weight: 3
+        logic: shopkeepers_key
+      - name: Nailmaster's Glory
+        logic: great_slash & dash_slash & cyclone_slash
+      - name: Grimmchild
+        logic: grimm_troupe
+  - name: Forgotten Crossroads
+    logic:
+    locations:
+      - name: Grubfather
+        weight: 2
+      - name: City Crest
+      - name: Vengeful Spirit
+      - name: Soul Catcher
+        logic: mantis_claw | vengeful_spirit
+      - name: Salubra
+        weight: 5
+        logic: mantis_claw | monarch_wings | mothwing_cloak | crystal_heart
+      - name: Glowing Womb
+        logic: crystal_heart & (mantis_claw | monarch_wings | lurien | monomon | herrah)
+      - name: World Sense
+        logic: lurien & monomon & herrah
+  - name: Greenpath
+    logic: mantis_claw | vengeful_spirit
+    locations:
+      - name: Mothwing Cloak
+      - name: Thorns of Agony
+        logic: mothwing_cloak | (mantis_claw & crystal_heart)
+      - name: Great Slash
+        logic: mantis_claw & ((mothwing_cloak & crystal_heart) | (mothwing_cloak & monarch_wings) | (crystal_heart & monarch_wings))
+      - name: Shape of Unn
+        logic: ismas_tear & (mantis_claw | monarch_wings)
+  - name: Fungal Wastes
+    logic: lurien | monomon | herrah | mothwing_cloak | monarch_wings
+    locations:
+      - name: Leg Eater
+        weight: 3
+      - name: Dashmaster
+      - name: Mantis Claw
+        logic: mothwing_cloak | monarch_wings | mantis_claw
+      - name: Mark of Pride
+        logic: mantis_claw
+      - name: Spore Shroom
+        logic: mantis_claw
+  - name: Crystal Peak
+    logic: lumafly_lantern | desolate_dive | (mantis_claw & monarch_wings & crystal_heart)
+    locations:
+      - name: Shopkeeper's Key
+        logic: mantis_claw
+      - name: Crystal Heart
+        logic: mantis_claw & (crystal_heart | mothwing_cloak | monarch_wings)
+      - name: Deep Focus
+        logic: mantis_claw & crystal_heart
+      - name: Descending Dark
+        logic: lumafly_lantern & ((monarch_wings & mothwing_cloak) | crystal_heart) & desolate_dive & (mantis_claw | monarch_wings)
+  - name: Resting Grounds
+    logic: tram_pass | (mantis_claw & (monarch_wings | crystal_heart)) | lumafly_lantern
+    locations:
+      - name: Dream Nail
+      - name: Seer
+        weight: 3
+      - name: Dreamshield
+      - name: Soul Eater
+        logic: desolate_dive & (mantis_claw | monarch_wings)
+  - name: Howling Cliffs
+    logic: mantis_claw
+    locations:
+      - name: Cyclone Slash
+      - name: Grimm Troupe
+        logic: dream_nail
+        weight: 0
+      - name: Joni's Blessing
+        logic: lumafly_lantern
+      - name: Baldur Shell
+        logic: vengeful_spirit
+  - name: City of Tears
+    logic: (city_crest & (crystal_heart | ismas_tear | (mantis_claw & mothwing_cloak))) | (mantis_claw & (monarch_wings | crystal_heart))
+    locations:
+      - name: Storerooms Key
+      - name: Shade Soul
+        logic: elegant_key
+      - name: Spell Twister
+        logic: mantis_claw & monarch_wings
+      - name: Desolate Dive
+        logic: mantis_claw & monarch_wings
+      - name: Lurien
+        logic: mantis_claw & monarch_wings & dream_nail
+  - name: Ancient Basin
+    logic: mantis_claw & monarch_wings
+    locations:
+      - name: Basin Key
+      - name: Monarch Wings
+      - name: King Fragment
+        logic: dream_nail & mantis_claw & mothwing_cloak & monarch_wings & crystal_heart
+  - name: Abyss
+    logic: mantis_claw & monarch_wings & kings_brand
+    locations:
+      - name: Lifeblood Core
+        logic: mothwing_cloak & lifeblood
+      - name: Abyss Shriek
+        logic: howling_wraiths
+      - name: Shade Cloak
+      - name: Void Heart
+        logic: mothwing_cloak & shade_cloak & dream_nail & kingsoul
+  - name: Kingdom's Edge
+    logic: (mantis_claw & monarch_wings) | (tram_pass & (mantis_claw | monarch_wings))
+    locations:
+      - name: Dash Slash
+      - name: Quick Slash
+        logic: desolate_dive & mothwing_cloak
+      - name: Lurker Key
+        logic: mantis_claw
+      - name: King's Brand
+        logic: mantis_claw & monarch_wings
+      - name: Collector's Map
+        logic: love_key & mantis_claw
+  - name: Royal Waterways
+    logic: simple_key & ((city_crest & (crystal_heart | ismas_tear | (mantis_claw & mothwing_cloak))) | (mantis_claw & (monarch_wings | crystal_heart)))
+    locations:
+      - name: Defender's Crest
+        logic: mantis_claw
+      - name: Flukenest
+        logic: desolate_dive
+      - name: Isma's Tear
+        logic: crystal_heart
+      - name: Godtuner
+        logic: desolate_dive & (mantis_claw | monarch_wings) & simple_key_4
+  - name: Deepnest
+    logic: lumafly_lantern & (mantis_claw | monarch_wings)
+    locations:
+      - name: Herrah
+        logic: mantis_claw & dream_nail
+      - name: Sharp Shadow
+        logic: mothwing_cloak & shade_cloak
+      - name: Weaversong
+      - name: Tram Pass
+        logic: mantis_claw
+      - name: Hiveblood
+        logic: tram_pass & mantis_claw & monarch_wings
+  - name: Fog Canyon
+    logic: mantis_claw | vengeful_spirit | ismas_tear
+    locations:
+      - name: Howling Wraiths
+        logic: mantis_claw
+      - name: Monomon
+        logic: mantis_claw & dream_nail & (ismas_tear | crystal_heart)
+  - name: Queen's Gardens
+    logic: (mantis_claw | vengeful_spirit | ismas_tear) & (ismas_tear | (shade_cloak & mothwing_cloak)) | (lumafly_lantern & mantis_claw & monarch_wings)
+    locations:
+      - name: Love Key
+        logic: ismas_tear & mothwing_cloak & mantis_claw
+      - name: Queen Fragment
+        logic: shade_cloak & mothwing_cloak & (mantis_claw | monarch_wings)
